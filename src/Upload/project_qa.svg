@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 220" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgQA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="winGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="220" fill="url(#bgQA)"/>
+
+  <!-- Application Window -->
+  <rect x="70" y="30" width="260" height="150" rx="8" fill="url(#winGrad)" stroke="#475569" stroke-width="1.5"/>
+
+  <!-- Title bar -->
+  <path d="M 70 38 Q 70 30 78 30 L 322 30 Q 330 30 330 38 L 330 52 L 70 52 Z" fill="#334155"/>
+  <circle cx="86" cy="41" r="3.5" fill="#ef4444"/>
+  <circle cx="98" cy="41" r="3.5" fill="#f59e0b"/>
+  <circle cx="110" cy="41" r="3.5" fill="#10b981"/>
+  <text x="200" y="44" font-family="sans-serif" font-size="10" fill="#cbd5e1" text-anchor="middle">PyQt Network Test Automation Tool</text>
+
+  <!-- Content Area: charts & logs -->
+  <!-- Left panel: test list -->
+  <rect x="85" y="65" width="85" height="100" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <line x1="92" y1="78" x2="160" y2="78" stroke="#38bdf8" stroke-width="2"/>
+  <line x1="92" y1="92" x2="150" y2="92" stroke="#4ade80" stroke-width="2"/>
+  <line x1="92" y1="106" x2="155" y2="106" stroke="#4ade80" stroke-width="2"/>
+  <line x1="92" y1="120" x2="140" y2="120" stroke="#f87171" stroke-width="2"/>
+  <line x1="92" y1="134" x2="162" y2="134" stroke="#4ade80" stroke-width="2"/>
+  <line x1="92" y1="148" x2="145" y2="148" stroke="#4ade80" stroke-width="2"/>
+
+  <!-- Right panel: metrics -->
+  <rect x="180" y="65" width="135" height="45" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="190" y="82" font-family="sans-serif" font-size="9" fill="#94a3b8">Execution Time</text>
+  <text x="190" y="100" font-family="sans-serif" font-size="14" font-weight="bold" fill="#38bdf8">-30% Cycle Time</text>
+
+  <rect x="180" y="120" width="135" height="45" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="190" y="137" font-family="sans-serif" font-size="9" fill="#94a3b8">Regression Tests</text>
+  <text x="190" y="155" font-family="sans-serif" font-size="14" font-weight="bold" fill="#4ade80">100+ Automated</text>
+
+  <text x="200" y="200" font-family="sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Firmware Regression & Telemetry Suite</text>
+</svg>

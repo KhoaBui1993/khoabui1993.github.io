@@ -1,26 +1,29 @@
 import React from 'react';
-import Header from './components/header/Header'
-import Home from './components/home/Home'
+import Header from './components/header/Header';
+import Home from './components/home/Home';
 import About from './components/about/About';
 import Skills from './components/skills/Skills';
-import Qualification from './components/qualification/Qualification'
+import Qualification from './components/qualification/Qualification';
+import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import ScrollUp from './components/scrollUp/ScrollUp';
-import Portfolio from './components/portfolio/Portfolio';
+import CyberBackground from './components/cyber/CyberBackground';
+import './components/cyber/Cyber.css';
 import './App.css';
 
 function App() {
   return (
     <>
+      <CyberBackground />
       <Header />
-      <main className='main'>
+      <main className='main' style={{ position: 'relative', zIndex: 1 }}>
         <Home />   
         <About />
         <Skills />
         <Qualification />
-        <Contact />
         <Portfolio />
+        <Contact />
       </main>
       <Footer />
       <ScrollUp />

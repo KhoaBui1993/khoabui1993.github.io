@@ -1,8 +1,9 @@
-import React from 'react'
-import Social from './Social'
-import Data from './Data'
-import './Home.css'
-import ScrollDown from './ScrollDown'
+import React from 'react';
+import Social from './Social';
+import Data from './Data';
+import './Home.css';
+import ScrollDown from './ScrollDown';
+
 const Home = () => {
   return (
     <section className='home section' id='home'>
@@ -15,7 +16,7 @@ const Home = () => {
         <ScrollDown />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -1,106 +1,128 @@
-.about__container{
-    grid-template-columns: repeat(2,1fr);
+.about__container {
+    grid-template-columns: 380px 1fr;
     align-items: center;
-    column-gap: 4rem;
-
+    column-gap: 4.5rem;
 }
 
-.about__img{
-    width: 350px;
-    height: 350px;
-    border-radius: 1.5rem;
+.about__img {
+    width: 340px;
+    height: 340px;
+    border-radius: 2rem;
+    object-fit: cover;
     justify-self: center;
+    border: 3px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.about__img:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary-color);
+}
+
+.about__img-badge {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0d1527;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-family: var(--code-font);
+    font-size: var(--tiny-font-size);
+    color: #38bdf8;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 0 0 10px rgba(56, 189, 248, 0.2);
+    white-space: nowrap;
 }
 
 .about__info {
-    grid-template-columns: repeat(3, 140px);
-    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
     margin-bottom: var(--mb-2);
 }
 
 .about__box {
     background-color: var(--container-color);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
     text-align: center;
-    padding: 1rem 1.25rem;
+    padding: 1.25rem 0.75rem;
+    transition: all 0.25s ease;
+    box-shadow: var(--card-shadow);
+}
+
+.about__box:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
 }
 
 .about__icon {
-    font-size: 1.5rem;
-    color: var(--title-color);
+    font-size: 1.6rem;
+    color: var(--primary-color);
     margin-bottom: var(--mb-0-5);
+    display: block;
 }
 
 .about__title {
     font-size: var(--small-font-size);
-    font-weight: var(--font-medium);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+    margin-bottom: 0.2rem;
 }
 
 .about__subtitle {
     font-size: var(--tiny-font-size);
+    color: var(--text-muted);
+    font-family: var(--code-font);
 }
 
-.about__description{
-    padding: 0 4rem 0 0;
-    margin-bottom: var(--mb-2-5);
+.about__description {
+    color: var(--text-color);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
 }
 
 /*================ BREAKPOINTS ========================== */
 
-/* For large devices */
 @media screen and (max-width: 992px) {
     .about__container {
         grid-template-columns: 1fr;
-        row-gap: 2rem;
+        row-gap: 2.5rem;
     }
-    .about__img{
-        width: 220px;
-        height: 220px;
+    .about__img {
+        width: 260px;
+        height: 260px;
     }
-
-    .about__box{
-        padding: 0.75rem 0.5rem;
-    }
-    .about__data{
+    .about__data {
         text-align: center;
     }
-    .about__info{
-        justify-content: center;
+    .about__info {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .about__description {
-        padding: 0 5rem;
-        margin-bottom: 2rem;
+        padding: 0 1rem;
     }
-  }
-  
-  /* For medium devices */
-  @media screen and (max-width: 768px) {
-    body{
-        margin: 0 0 var(--header-height) 0;
-    }
-    .section{
-      padding: 2rem 0 4rem;
-    }
-    .about__subtitle{
-        margin-bottom: var(--mb-3);
-    }
-  
-  
-    
-  }
-  
-  @media screen and (max-width: 576px) {
+}
+
+@media screen and (max-width: 576px) {
     .about__info {
         grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
     }
-    .about__description{
-        padding: 0;
+    .about__box {
+        padding: 0.75rem 0.4rem;
     }
-  }
-  /* For small devices */
-  @media screen and (max-width: 350px) {
-   .about__info{
-    grid-template-columns: repeat(2, 1fr);
-   }
+    .about__title {
+        font-size: 0.75rem;
+    }
+    .about__subtitle {
+        font-size: 0.65rem;
+    }
 }
