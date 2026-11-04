@@ -1,17 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.1684f646.css",
-    "main.js": "/static/js/main.f1d397eb.js",
-    "static/media/porfolio1.png": "/static/media/porfolio1.5309a356304a34600101.png",
+    "main.css": "/static/css/main.bdda39ca.css",
+    "main.js": "/static/js/main.cb91c228.js",
     "static/media/Me.jpg": "/static/media/Me.a3b82716fc613aee2620.jpg",
     "static/media/Me1.jpg": "/static/media/Me1.5376256e00338efe559a.jpg",
-    "static/media/Khoa_Resume_1.pdf": "/static/media/Khoa_Resume_1.e5169279b4b374512c74.pdf",
+    "static/media/wanderlust_preview.png": "/static/media/wanderlust_preview.817de6d1bfd1523edd6f.png",
+    "static/media/project_rtl.png": "/static/media/project_rtl.eaddb0edff02c18773ae.png",
+    "static/media/project_virtualization.png": "/static/media/project_virtualization.93342f0a6fab78194a97.png",
+    "static/media/project_baremetal.png": "/static/media/project_baremetal.839218e763c86975b658.png",
+    "static/media/project_qa.png": "/static/media/project_qa.1c3e693fa69f378efa50.png",
+    "static/media/Khoa_Resume_1.pdf": "/static/media/Khoa_Resume_1.c8ed01483a0d4713c8d5.pdf",
     "index.html": "/index.html",
-    "main.1684f646.css.map": "/static/css/main.1684f646.css.map",
-    "main.f1d397eb.js.map": "/static/js/main.f1d397eb.js.map"
+    "main.bdda39ca.css.map": "/static/css/main.bdda39ca.css.map",
+    "main.cb91c228.js.map": "/static/js/main.cb91c228.js.map"
   },
   "entrypoints": [
-    "static/css/main.1684f646.css",
-    "static/js/main.f1d397eb.js"
+    "static/css/main.bdda39ca.css",
+    "static/js/main.cb91c228.js"
   ]
 }
