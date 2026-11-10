@@ -11,43 +11,43 @@ const skillCategories = [
       { name: "PXE Boot Provisioning", level: "Advanced" },
       { name: "Ansible Automation", level: "Intermediate" },
       { name: "OpenLDAP & RBAC", level: "Intermediate" },
-      { name: "Linux Containers", level: "Intermediate" }
+      { name: "Linux Containers (LXC)", level: "Intermediate" }
     ]
   },
   {
     title: "Hardware & Infrastructure",
     icon: "bx bx-chip",
     skills: [
-      { name: "Dell PowerEdge", level: "Advanced" },
-      { name: "HPE ProLiant", level: "Advanced" },
+      { name: "Dell PowerEdge Servers", level: "Advanced" },
+      { name: "HPE ProLiant Servers", level: "Advanced" },
       { name: "iDRAC, iLO & IPMI", level: "Advanced" },
       { name: "RAID (PERC & LSI)", level: "Intermediate" },
-      { name: "NVMe, SAS & SATA", level: "Intermediate" },
-      { name: "Rack-and-Stack & PDU", level: "Advanced" }
+      { name: "NVMe, SAS & SATA Fabric", level: "Intermediate" },
+      { name: "42U Rack & PDU Balancing", level: "Advanced" }
     ]
   },
   {
     title: "Firmware & Test Validation",
     icon: "bx bx-test-tube",
     skills: [
-      { name: "Hardware-in-the-Loop", level: "Advanced" },
-      { name: "POST & BIOS/UEFI", level: "Advanced" },
+      { name: "Hardware-in-the-Loop (HIL)", level: "Advanced" },
+      { name: "POST & BIOS/UEFI Config", level: "Advanced" },
       { name: "NXP Layerscape LA12xx", level: "Intermediate" },
-      { name: "Firmware Flashing", level: "Advanced" },
-      { name: "CodeWarrior", level: "Intermediate" },
-      { name: "MemTest86 & Prime95", level: "Advanced" }
+      { name: "Firmware Flashing & Bring-Up", level: "Advanced" },
+      { name: "CodeWarrior Debugger", level: "Intermediate" },
+      { name: "MemTest86 & Prime95 Stress", level: "Advanced" }
     ]
   },
   {
-    title: "Scripting, DB & Tools",
+    title: "Scripting, DB & Workflows",
     icon: "bx bx-code-alt",
     skills: [
       { name: "Python Automation", level: "Advanced" },
       { name: "Bash Scripting", level: "Advanced" },
       { name: "C / C++ & Java", level: "Intermediate" },
       { name: "SQL (MySQL, SQLite3)", level: "Intermediate" },
-      { name: "Git & Jira Workflow", level: "Advanced" },
-      { name: "REST APIs & PyQt", level: "Intermediate" }
+      { name: "Git & Jira CI Workflows", level: "Advanced" },
+      { name: "REST APIs & PyQt Tooling", level: "Intermediate" }
     ]
   }
 ];
@@ -55,28 +55,31 @@ const skillCategories = [
 const Skill = () => {
   return (
     <section className="skills section" id='skills'>
-      <h2 className="section__title">Skills & Capabilities</h2>
-      <span className="section__subtitle">{"//"} TECHNICAL STACK MATRIX</span>
-      <div className="skills__container container grid">
-        {skillCategories.map((cat, idx) => (
-          <div className="skills__content tech-corner-card" key={idx}>
-            <h3 className="skills__title">
-              <i className={`${cat.icon} skills__title-icon`}></i>
-              {cat.title}
-            </h3>
-            <div className="skills__box">
-              {cat.skills.map((skill, sIdx) => (
-                <div className="skills__data" key={sIdx}>
-                  <i className="bx bx-badge-check"></i>
-                  <div>
-                    <h3 className="skills__name">{skill.name}</h3>
-                    <span className="skills__level">{skill.level}</span>
+      <div className="container">
+        <h2 className="section__title">Technical Competencies</h2>
+        <span className="section__subtitle">SYSTEM ARCHITECTURE &amp; TOOLING STACK</span>
+
+        <div className="skills__container grid">
+          {skillCategories.map((cat, idx) => (
+            <div className="skills__content" key={idx}>
+              <h3 className="skills__title">
+                <i className={`${cat.icon} skills__title-icon`}></i>
+                {cat.title}
+              </h3>
+              <div className="skills__box">
+                {cat.skills.map((skill, sIdx) => (
+                  <div className="skills__data" key={sIdx}>
+                    <i className="bx bx-badge-check"></i>
+                    <div>
+                      <h4 className="skills__name">{skill.name}</h4>
+                      <span className="skills__level">{skill.level}</span>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

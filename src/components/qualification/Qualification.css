@@ -1,28 +1,31 @@
 .qualification__container {
-    max-width: 980px;
+    max-width: 960px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .qualification__tabs {
     display: flex;
-    justify-content: center;
-    margin-bottom: var(--mb-2-5);
-    gap: 1.5rem;
+    justify-content: flex-start;
+    margin-bottom: 2.5rem;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
 }
 
 .qualification__button {
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
-    color: var(--text-color);
+    font-size: var(--small-font-size);
+    font-weight: 600;
+    font-family: var(--font-display);
+    color: var(--text-muted);
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.65rem 1.4rem;
-    border-radius: 0.85rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: 0.5rem;
     border: 1px solid transparent;
-    transition: all 0.25s ease;
+    transition: all 0.2s ease;
 }
 
 .qualification__button:hover {
@@ -31,19 +34,13 @@
 }
 
 .qualification__button-active {
-    color: var(--primary-color);
-    font-weight: var(--font-semi-bold);
+    color: var(--primary-color) !important;
     background-color: var(--tag-bg);
     border-color: var(--border-color);
 }
 
 .qualification__icon {
-    font-size: 1.35rem;
-}
-
-.qualification__sections {
-    display: flex;
-    flex-direction: column;
+    font-size: 1.2rem;
 }
 
 .qualification__content {
@@ -59,16 +56,16 @@
 .qualification__card {
     background-color: var(--container-color);
     border: 1px solid var(--border-color);
-    border-radius: 1.25rem;
-    padding: 1.75rem 2rem;
+    border-radius: 0.85rem;
+    padding: 1.85rem 2rem;
     box-shadow: var(--card-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .qualification__card:hover {
     box-shadow: var(--card-shadow-hover);
-    border-color: var(--primary-color);
-    transform: translateY(-3px);
+    border-color: var(--border-color-hover);
+    transform: translateY(-2px);
 }
 
 .qualification__card-header {
@@ -82,14 +79,16 @@
 
 .qualification__title {
     font-size: 1.2rem;
-    font-weight: var(--font-bold);
+    font-weight: 700;
+    font-family: var(--font-display);
     color: var(--title-color);
+    letter-spacing: -0.01em;
 }
 
 .qualification__subtitle {
     font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
-    color: var(--text-color);
+    font-weight: 600;
+    color: var(--primary-color);
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -98,39 +97,51 @@
 
 .qualification__calendar {
     font-size: var(--tiny-font-size);
-    font-family: var(--code-font);
-    color: var(--primary-color);
-    background-color: var(--tag-bg);
-    padding: 0.35rem 0.85rem;
-    border-radius: 0.5rem;
+    font-family: var(--font-mono);
+    color: var(--text-color);
+    background-color: var(--container-color-alt);
+    padding: 0.35rem 0.75rem;
+    border-radius: 0.4rem;
     border: 1px solid var(--border-color);
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    font-weight: var(--font-medium);
+    font-weight: 600;
 }
 
 .qualification__location {
     font-size: var(--small-font-size);
     color: var(--text-muted);
+    font-family: var(--font-mono);
     display: flex;
     align-items: center;
     gap: 0.35rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
 }
 
 .qualification__bullets {
-    list-style: disc inside;
-    margin: 0.75rem 0 1rem 0;
+    list-style: none;
+    margin: 0.75rem 0 1.25rem 0;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.65rem;
 }
 
 .qualification__bullet {
+    position: relative;
+    padding-left: 1.25rem;
     font-size: var(--normal-font-size);
     color: var(--text-color);
-    line-height: 1.65;
+    line-height: 1.7;
+}
+
+.qualification__bullet::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 .qualification__tags {
@@ -138,28 +149,28 @@
     flex-wrap: wrap;
     gap: 0.45rem;
     margin-top: 1rem;
-    padding-top: 0.75rem;
+    padding-top: 0.85rem;
     border-top: 1px solid var(--border-color);
 }
 
 .qualification__tag {
-    font-size: var(--tiny-font-size);
-    font-family: var(--code-font);
-    font-weight: var(--font-medium);
-    background-color: var(--tag-bg);
-    color: var(--tag-color);
-    padding: 0.2rem 0.65rem;
-    border-radius: 0.4rem;
+    font-size: 0.75rem;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    background-color: var(--container-color-alt);
+    color: var(--text-color);
+    padding: 0.25rem 0.65rem;
+    border-radius: 0.35rem;
     border: 1px solid var(--border-color);
 }
 
-/*================ BREAKPOINTS ========================== */
-
+/* ==========================================================================
+   BREAKPOINTS
+   ========================================================================== */
 @media screen and (max-width: 768px) {
     .qualification__card {
         padding: 1.35rem 1.25rem;
     }
-
     .qualification__card-header {
         flex-direction: column;
     }

@@ -79,83 +79,87 @@ const Qualification = () => {
 
   return (
     <section className="qualification section" id="qualification">
-      <h2 className="section__title">Experience & Education</h2>
-      <span className="section__subtitle">{"//"} SYSTEM LOGS & OPERATIONAL TRACK RECORD</span>
+      <div className="container">
+        <h2 className="section__title">Career History &amp; Education</h2>
+        <span className="section__subtitle">SYSTEM OPERATIONAL TRACK RECORD</span>
 
-      <div className="qualification__container container">
-        <div className="qualification__tabs">
-          <div
-            className={`qualification__button ${toggleState === 1 ? "qualification__button-active" : ""}`}
-            onClick={() => setToggleState(1)}
-          >
-            <i className="uil uil-briefcase-alt qualification__icon"></i> Experience
+        <div className="qualification__container">
+          <div className="qualification__tabs">
+            <button
+              type="button"
+              className={`qualification__button ${toggleState === 1 ? "qualification__button-active" : ""}`}
+              onClick={() => setToggleState(1)}
+            >
+              <i className="uil uil-briefcase-alt qualification__icon"></i> Professional Experience
+            </button>
+
+            <button
+              type="button"
+              className={`qualification__button ${toggleState === 2 ? "qualification__button-active" : ""}`}
+              onClick={() => setToggleState(2)}
+            >
+              <i className="uil uil-graduation-cap qualification__icon"></i> Academic Background
+            </button>
           </div>
 
-          <div
-            className={`qualification__button ${toggleState === 2 ? "qualification__button-active" : ""}`}
-            onClick={() => setToggleState(2)}
-          >
-            <i className="uil uil-graduation-cap qualification__icon"></i> Education
-          </div>
-        </div>
-
-        <div className="qualification__sections">
-          {/* Experience Tab */}
-          <div className={toggleState === 1 ? "qualification__content qualification__content-active" : "qualification__content"}>
-            {experiences.map((exp, idx) => (
-              <div className="qualification__card tech-corner-card" key={idx}>
-                <div className="qualification__card-header">
-                  <div>
-                    <h3 className="qualification__title">{exp.role}</h3>
-                    <div className="qualification__subtitle">{exp.company}</div>
+          <div className="qualification__sections">
+            {/* Experience Tab */}
+            <div className={toggleState === 1 ? "qualification__content qualification__content-active" : "qualification__content"}>
+              {experiences.map((exp, idx) => (
+                <article className="qualification__card" key={idx}>
+                  <div className="qualification__card-header">
+                    <div>
+                      <h3 className="qualification__title">{exp.role}</h3>
+                      <div className="qualification__subtitle">{exp.company}</div>
+                    </div>
+                    <div className="qualification__calendar">
+                      <i className="uil uil-calendar-alt"></i> {exp.period}
+                    </div>
                   </div>
-                  <div className="qualification__calendar">
-                    <i className="uil uil-calendar-alt"></i> {exp.period}
+
+                  <div className="qualification__location">
+                    <i className="uil uil-map-marker"></i> {exp.location}
                   </div>
-                </div>
 
-                <div className="qualification__location">
-                  <i className="uil uil-map-marker"></i> {exp.location}
-                </div>
+                  <ul className="qualification__bullets">
+                    {exp.bullets.map((bullet, bIdx) => (
+                      <li className="qualification__bullet" key={bIdx}>{bullet}</li>
+                    ))}
+                  </ul>
 
-                <ul className="qualification__bullets">
-                  {exp.bullets.map((bullet, bIdx) => (
-                    <li className="qualification__bullet" key={bIdx}>{bullet}</li>
-                  ))}
-                </ul>
-
-                <div className="qualification__tags">
-                  {exp.tags.map((tag, tIdx) => (
-                    <span className="qualification__tag" key={tIdx}>{tag}</span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Education Tab */}
-          <div className={toggleState === 2 ? "qualification__content qualification__content-active" : "qualification__content"}>
-            {education.map((edu, idx) => (
-              <div className="qualification__card tech-corner-card" key={idx}>
-                <div className="qualification__card-header">
-                  <div>
-                    <h3 className="qualification__title">{edu.degree}</h3>
-                    <div className="qualification__subtitle">{edu.institution}</div>
+                  <div className="qualification__tags">
+                    {exp.tags.map((tag, tIdx) => (
+                      <span className="qualification__tag" key={tIdx}>{tag}</span>
+                    ))}
                   </div>
-                  <div className="qualification__calendar">
-                    <i className="uil uil-calendar-alt"></i> {edu.period}
+                </article>
+              ))}
+            </div>
+
+            {/* Education Tab */}
+            <div className={toggleState === 2 ? "qualification__content qualification__content-active" : "qualification__content"}>
+              {education.map((edu, idx) => (
+                <article className="qualification__card" key={idx}>
+                  <div className="qualification__card-header">
+                    <div>
+                      <h3 className="qualification__title">{edu.degree}</h3>
+                      <div className="qualification__subtitle">{edu.institution}</div>
+                    </div>
+                    <div className="qualification__calendar">
+                      <i className="uil uil-calendar-alt"></i> {edu.period}
+                    </div>
                   </div>
-                </div>
 
-                <div className="qualification__location">
-                  <i className="uil uil-map-marker"></i> {edu.location}
-                </div>
+                  <div className="qualification__location">
+                    <i className="uil uil-map-marker"></i> {edu.location}
+                  </div>
 
-                <p style={{ fontSize: 'var(--small-font-size)', color: 'var(--text-color)', marginTop: '0.5rem' }}>
-                  <strong>Key Coursework:</strong> {edu.coursework}
-                </p>
-              </div>
-            ))}
+                  <p style={{ fontSize: 'var(--normal-font-size)', color: 'var(--text-color)', marginTop: '0.75rem', lineHeight: 1.6 }}>
+                    <strong>Key Coursework:</strong> {edu.coursework}
+                  </p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </div>
